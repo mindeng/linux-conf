@@ -18,7 +18,7 @@ alias vi='vim'
 alias mk='make -j 5'
 alias mi='echo make install ...; make install > /dev/null'
 #alias ls='ls --show-control-chars --color=auto'
-alias ls='ls -G'    # mac os x
+#alias ls='ls -G'    # mac os x
 alias dir='ls -l --color'
 #alias svndiff='svn diff --diff-cmd ~/bin/mydiff.sh'
 
