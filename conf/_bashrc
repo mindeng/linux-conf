@@ -1,5 +1,6 @@
 #TZ='Asia/Shanghai'; export TZ
 #export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 export NDK_ROOT=~/soft/android-ndk-r8e
 export PYTHONPATH=~/py_libs
