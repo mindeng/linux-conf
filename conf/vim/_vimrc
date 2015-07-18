@@ -90,6 +90,10 @@ set guioptions-=m
 " Use Q for formatting
 nnoremap Q gq
 
+""" For windows
+" When set, a forward slash is used when expanding file names. 
+set shellslash
+
 if filereadable("./.vimrc.local")
   source ./.vimrc.local
 endif
