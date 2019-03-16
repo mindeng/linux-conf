@@ -3,6 +3,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 " encodings
+set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,latin1,gb18030,utf-16,big5,default
 
