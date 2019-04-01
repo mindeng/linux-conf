@@ -1,6 +1,13 @@
 # GNU Screen - main configuration file
-# All other .screenrc files will source this file to inherit settings.
-# Author: Christian Wills - cwills.sys@gmail.com
+
+# Cache 30000 lines for scroll back
+defscrollback 30000
+
+startup_message off # Turn off the splash screen
+
+# C-a v sets your X clipboard to the content of screens copy buffer.
+bind v eval "writebuf" "exec sh -c 'exec xsel -b --display :0 -i < /tmp/screen-exchange'"
+
 
 # Allow bold colors - necessary for some reason
 attrcolor b ".I"
@@ -17,9 +24,6 @@ defbce "on"
 # Enable 256 color term
 term xterm-256color
 
-# Cache 30000 lines for scroll back
-defscrollback 30000
-
 # New mail notification
 #backtick 101 30 15 $HOME/bin/mailstatus.sh
 
@@ -30,12 +34,6 @@ hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= 
 # change command character from ctrl-a to ctrl-b (emacs users may want this)
 #escape ^Bb
 
-# Hide hardstatus: ctrl-a f
-bind f eval "hardstatus ignore"
-# Show hardstatus: ctrl-a F
-bind F eval "hardstatus alwayslastline"
-
-startup_message off # Turn off the splash screen
 
 # Make the shell start as a login shell, so the .bash_profile will be loaded
-shell -$SHELL
+#shell -$SHELL
